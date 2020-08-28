@@ -1,0 +1,1729 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Documentation Technique</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+</head>
+
+<body class='documentation m0'>
+  <div class='flex'>
+    <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+      <div class='py1 px2'>
+        <h3 class='mb0 no-anchor'></h3>
+        <div class='mb1'><code></code></div>
+        <input placeholder='Filter' id='filter-input' class='col12 block input' type='text' />
+        <div id='toc'>
+          <ul class='list-reset h5 py1-ul'>
+            <li><a href='#presentation' class="">
+                Documentation technique
+              </a>
+            </li>
+            <li><a href='#todo' class="">
+                Todo
+              </a>
+            </li>
+            <li><a href='#controller' class=" toggle-sibling">
+                Controller
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Instance members</span></li>
+                  <li><a href='#controllersetview' class='regular pre-open'>
+                      #setView
+                    </a></li>
+                  <li><a href='#controllershowall' class='regular pre-open'>
+                      #showAll
+                    </a></li>
+                  <li><a href='#controllershowactive' class='regular pre-open'>
+                      #showActive
+                    </a></li>
+                  <li><a href='#controllershowcompleted' class='regular pre-open'>
+                      #showCompleted
+                    </a></li>
+                  <li><a href='#controlleradditem' class='regular pre-open'>
+                      #addItem
+                    </a></li>
+                  <li><a href='#controlleredititem' class='regular pre-open'>
+                      #editItem
+                    </a></li>
+                  <li><a href='#controlleredititemsave' class='regular pre-open'>
+                      #editItemSave
+                    </a></li>
+                  <li><a href='#controlleredititemcancel' class='regular pre-open'>
+                      #editItemCancel
+                    </a></li>
+                  <li><a href='#controllerremoveitem' class='regular pre-open'>
+                      #removeItem
+                    </a></li>
+                  <li><a href='#controllerremovecompleteditems' class='regular pre-open'>
+                      #removeCompletedItems
+                    </a></li>
+                  <li><a href='#controllertogglecomplete' class='regular pre-open'>
+                      #toggleComplete
+                    </a></li>
+                  <li><a href='#controllertoggleall' class='regular pre-open'>
+                      #toggleAll
+                    </a></li>
+                  <li><a href='#controller_updatecount' class='regular pre-open'>
+                      #_updateCount
+                    </a></li>
+                  <li><a href='#controller_filter' class='regular pre-open'>
+                      #_filter
+                    </a></li>
+                  <li><a href='#controller_updatefilterstate' class='regular pre-open'>
+                      #_updateFilterState
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href='#helper' class=" toggle-sibling">
+                Helper
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Static members</span></li>
+                  <li><a href='#helperqs' class='regular pre-open'>
+                      .qs
+                    </a></li>
+                  <li><a href='#helperqsa' class='regular pre-open'>
+                      .qsa
+                    </a></li>
+                  <li><a href='#helperon' class='regular pre-open'>
+                      .$on
+                    </a></li>
+                  <li><a href='#helperdelegate' class='regular pre-open'>
+                      .$delegate
+                    </a></li>
+                  <li><a href='#helperparent' class='regular pre-open'>
+                      .$parent
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href='#model' class=" toggle-sibling">
+                Model
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Instance members</span></li>
+                  <li><a href='#modelcreate' class='regular pre-open'>
+                      #create
+                    </a></li>
+                  <li><a href='#modelread' class='regular pre-open'>
+                      #read
+                    </a></li>
+                  <li><a href='#modelupdate' class='regular pre-open'>
+                      #update
+                    </a></li>
+                  <li><a href='#modelremove' class='regular pre-open'>
+                      #remove
+                    </a></li>
+                  <li><a href='#modelremoveall' class='regular pre-open'>
+                      #removeAll
+                    </a></li>
+                  <li><a href='#modelgetcount' class='regular pre-open'>
+                      #getCount
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href='#store' class=" toggle-sibling">
+                Store
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Instance members</span></li>
+                  <li><a href='#storefind' class='regular pre-open'>
+                      #find
+                    </a></li>
+                  <li><a href='#storefindall' class='regular pre-open'>
+                      #findAll
+                    </a></li>
+                  <li><a href='#storesave' class='regular pre-open'>
+                      #save
+                    </a></li>
+                  <li><a href='#storeremove' class='regular pre-open'>
+                      #remove
+                    </a></li>
+                  <li><a href='#storedrop' class='regular pre-open'>
+                      #drop
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href='#template' class=" toggle-sibling">
+                Template
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Instance members</span></li>
+                  <li><a href='#templateshow' class='regular pre-open'>
+                      #show
+                    </a></li>
+                  <li><a href='#templateitemcounter' class='regular pre-open'>
+                      #itemCounter
+                    </a></li>
+                  <li><a href='#templateclearcompletedbutton' class='regular pre-open'>
+                      #clearCompletedButton
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href='#view' class=" toggle-sibling">
+                View
+                <span class='icon'>▸</span>
+              </a>
+              <div class='toggle-target display-none'>
+                <ul class='list-reset py1-ul pl1'>
+                  <li class='h5'><span>Instance members</span></li>
+                  <li><a href='#view_removeitem' class='regular pre-open'>
+                      #_removeItem
+                    </a></li>
+                  <li><a href='#view_clearcompletedbutton' class='regular pre-open'>
+                      #_clearCompletedButton
+                    </a></li>
+                  <li><a href='#view_setfilter' class='regular pre-open'>
+                      #_setFilter
+                    </a></li>
+                  <li><a href='#view_elementcomplete' class='regular pre-open'>
+                      #_elementComplete
+                    </a></li>
+                  <li><a href='#view_edititem' class='regular pre-open'>
+                      #_editItem
+                    </a></li>
+                  <li><a href='#view_edititemdone' class='regular pre-open'>
+                      #_editItemDone
+                    </a></li>
+                  <li><a href='#viewrender' class='regular pre-open'>
+                      #render
+                    </a></li>
+                  <li><a href='#view_itemid' class='regular pre-open'>
+                      #_itemId
+                    </a></li>
+                  <li><a href='#view_binditemeditdone' class='regular pre-open'>
+                      #_bindItemEditDone
+                    </a></li>
+                  <li><a href='#view_binditemeditcancel' class='regular pre-open'>
+                      #_bindItemEditCancel
+                    </a></li>
+                  <li><a href='#viewbind' class='regular pre-open'>
+                      #bind
+                    </a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class='mt1 h6 quiet'>
+          <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+        </div>
+      </div>
+    </div>
+    <div id='split-right' class='relative overflow-auto height-viewport-100'>
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='presentation'>
+            Presentation du projet
+          </h3>
+        </div>
+        <p>Blabla</p>
+      </section>
+
+
+
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='todo'>
+            Todo
+          </h3>
+        </div>
+        <p>Configure une nouvelle Todo list.</p>
+        <div class='pre p1 fill-light mt0'>new Todo(name: <a
+            href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+        <div class='py1 quiet mt1 prose-big'>Parameters</div>
+        <div class='prose'>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>name</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+              Le nom de la nouvelle Todo list.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='controller'>
+            Controller
+          </h3>
+        </div>
+        <p>Le controller permet l'intéraction entre <a href="#model">Model</a> et <a href="#view">View</a></p>
+        <div class='pre p1 fill-light mt0'>new Controller(model: <a
+            href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, view:
+          <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+        <div class='py1 quiet mt1 prose-big'>Parameters</div>
+        <div class='prose'>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>model</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+              L'instance <a href="#model">Model</a>
+            </div>
+          </div>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>view</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+              L'instance <a href="#view">View</a>
+            </div>
+          </div>
+        </div>
+        <div class='py1 quiet mt1 prose-big'>Methods</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='controllersetview'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>setView(locationHash)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Charge et initialise <a href="#view">View</a></p>
+                <div class='pre p1 fill-light mt0'>setView(locationHash)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>locationHash</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+                      pour valeurs : '' / 'active' / 'completed'
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllershowall'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>showAll()</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Un événement déclencher au chargement afin d'afficher toutes les Todo</p>
+                <div class='pre p1 fill-light mt0'>showAll()</div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllershowactive'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>showActive()</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Affiche toutes les Todo actives non terminées</p>
+                <div class='pre p1 fill-light mt0'>showActive()</div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllershowcompleted'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>showCompleted()</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Affiche toutes les Todo terminées</p>
+                <div class='pre p1 fill-light mt0'>showCompleted()</div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controlleradditem'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>addItem(title)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Evénement à déclencher pour ajouter une Todo. Il suffit de passer dans l'objet
+                  événement et il va gérer l'insertion dans le DOM et la sauvegarde de la nouvelle Todo.</p>
+                <div class='pre p1 fill-light mt0'>addItem(title: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>title</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controlleredititem'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>editItem(id)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Déclenche le mode d'édition des éléments.</p>
+                <div class='pre p1 fill-light mt0'>editItem(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a
+                        href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controlleredititemsave'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>editItemSave(id, title)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Sort du mode édition après avoir modifié une Todo dont l’id et la nouvelle valeur du titre sont
+                  passés en paramètre.</p>
+                <div class='pre p1 fill-light mt0'>editItemSave(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  title: any)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a
+                        href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>title</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controlleredititemcancel'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>editItemCancel(title)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Annule le mode édition de la todo dont l’id est passé en paramètre.</p>
+                <div class='pre p1 fill-light mt0'>editItemCancel(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a
+                        href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllerremoveitem'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>removeItem(id)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Demande au modèle de supprimer du DOM et du storage la Todo dont l’id est passé en paramètre.</p>
+                <div class='pre p1 fill-light mt0'>removeItem(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de la Todo a retirer du DOM et du storage.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllerremovecompleteditems'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>removeCompletedItems()</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Demande au modèle de supprimer toutes les Todos terminées.</p>
+                <div class='pre p1 fill-light mt0'>removeCompletedItems()</div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllertogglecomplete'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>toggleComplete(id, checkbox, silent)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Met à jour l'affichage des éléments en fonction de leur statut.</p>
+                <div class='pre p1 fill-light mt0'>toggleComplete(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  checkbox: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+                  silent: (<a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+                  | <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>))
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de l'élément à compléter ou incomplet.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>checkbox</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      La case à cocher pour validé le statut de l'élément.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>silent</span> <code
+                        class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>))</code>
+                      Empêcher le re-filtrage de la liste des Todo.
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controllertoggleall'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>toggleAll(completed)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Bascule l'état d'activation / désactivation de toutes les cases à cocher.</p>
+                <div class='pre p1 fill-light mt0'>toggleAll(completed: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>completed</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controller_updatecount'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_updateCount()</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Met à jour les parties de la page qui changent en fonction du nombre restant de Todos.</p>
+                <div class='pre p1 fill-light mt0'>_updateCount()</div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controller_filter'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_filter(force)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Filtre les éléments de la Todo en fonction de la route active.</p>
+                <div class='pre p1 fill-light mt0'>_filter(force: (<a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+                  | <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>))
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>force</span> <code
+                        class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>))</code>
+                      Refiltre les Todo.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='controller_updatefilterstate'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_updateFilterState(currentPage)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Met à jour les routes dans l'url.
+                </p>
+                <div class='pre p1 fill-light mt0'>_updateFilterState(currentPage: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>currentPage</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='helper'>
+            Helper
+          </h3>
+          <p>Fonctions globales</p>
+        </div>
+        <div class='pre p1 fill-light mt0'>Helper</div>
+        <div class='py1 quiet mt1 prose-big'>Static Members</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='helperqs'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>qs(selector, scope)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Récupére les éléments par le sélecteur css. (qs = querySelector)</p>
+                <div class='pre p1 fill-light mt0'>qs(selector: any, scope: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>selector</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>scope</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+          </div>
+          <div class='border-bottom' id='helperqsa'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>qsa(selector, scope)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Récupére les éléments par le sélecteur CSS. (qsa = querySelectorAll)</p>
+                <div class='pre p1 fill-light mt0'>qsa(selector: any, scope: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>selector</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>scope</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='helperon'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>$on(target, type, callback, useCapture)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Encapsule l'addEventListener.</p>
+                <div class='pre p1 fill-light mt0'>$on(target: any, type: any, callback: any, useCapture: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>type</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>useCapture</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='helperdelegate'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>$delegate(target, selector, type, handler)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Délègue un eventListener à un parent.</p>
+                <div class='pre p1 fill-light mt0'>$delegate(target: any, selector: any, type: any, handler: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>selector</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>type</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>handler</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='helperparent'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>$parent(element, tagName)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Recherche le parent de l'élément avec le tagName : $parent(qs('a'), 'div');</p>
+                <div class='pre p1 fill-light mt0'>$parent(element: any, tagName: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>element</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>tagName</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='model'>
+            Model
+          </h3>
+        </div>
+        <p>Crée une nouvelle instance de model et raccorde <a href="#store">Store</a>.</p>
+        <div class='pre p1 fill-light mt0'>new Model(storage: <a
+            href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+        <div class='py1 quiet mt1 prose-big'>Parameters</div>
+        <div class='prose'>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>storage</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+              Une référence à la classe de stockage côté client.
+            </div>
+          </div>
+        </div>
+        <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='modelcreate'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>create(title, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Crée un nouveau model de Todo.</p>
+                <div class='pre p1 fill-light mt0'>create(title: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>title</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+                      Le titre de la Todo.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel après la création du modèle.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='modelread'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>read(query, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Trouve et renvoie un modèle en mémoire. Si aucune requête n'est donnée, il va simplement tout
+                  retourner. Si vous passez une chaîne ou un numéro, cela ressemblera à l'identifiant du modèle à
+                  trouver. Enfin, vous pouvez lui passer un objet.</p>
+                <div class='pre p1 fill-light mt0'>read(query: (<a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+                  | <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+                  | <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>),
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>query</span> <code
+                        class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>))</code>
+                      Une requête pour faire correspondre les modèles.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel après avoir trouvé le modèle.
+                    </div>
+                  </div>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Example</div>
+                <pre
+                  class='p1 overflow-auto round fill-light'>model.read(<span class="hljs-number">1</span>, func); <span class="hljs-comment">// Trouvera le model avec l'ID 1</span>
+model.read(<span class="hljs-string">'1'</span>); <span class="hljs-comment">// Idem au-dessus</span>
+<span class="hljs-comment">//Ci-dessous un modèle avec foo égale à bar et un hello égale à world.</span>
+model.read({ <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">hello</span>: <span class="hljs-string">'world'</span> });</pre>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='modelupdate'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>update(id, data, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Met à jour un modèle en lui attribuant un ID, des données et un callback lorsque la mise à jour est
+                  terminée.</p>
+                <div class='pre p1 fill-light mt0'>update(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  data: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L' ID du model à mettre à jour.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>data</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      Les données à mettre à jour et leurs nouvelles valeurs.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel quand la mise à jour est terminée.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='modelremove'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>remove(id, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Supprime un modèle du stockage.</p>
+                <div class='pre p1 fill-light mt0'>remove(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID du model à supprimer.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel lorsque la suppression est terminée.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='modelremoveall'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>removeAll(callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>ATTENTION: supprimera TOUTES les données du stockage.</p>
+                <div class='pre p1 fill-light mt0'>removeAll(callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel quand le stockage est vider.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='modelgetcount'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>getCount(callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Renvoie le nombre de toutes les Todos</p>
+                <div class='pre p1 fill-light mt0'>getCount(callback: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='store'>
+            Store
+          </h3>
+        </div>
+        <p>Crée un nouvel objet de stockage côté client et crée un espace vide si aucun stockage n'existe.</p>
+        <div class='pre p1 fill-light mt0'>new Store(name: <a
+            href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>,
+          callback: <a
+            href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</div>
+        <div class='py1 quiet mt1 prose-big'>Parameters</div>
+        <div class='prose'>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>name</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+              Le nom de notre BDD que nous voulons utiliser.
+            </div>
+          </div>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>callback</span> <code
+                class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+              Notre fausse BDD utilise des fonctions de rappels (en réalité vous feriez probablement des
+              appels AJAX)
+            </div>
+          </div>
+        </div>
+        <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='storefind'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>find(query, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Trouve les éléments basés sur une requête donnée en tant qu'objet JS</p>
+                <div class='pre p1 fill-light mt0'>find(query: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>query</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      La requête à comparer (c'est-à-dire {foo: 'bar'})
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel à déclencher lorsque l'exécution de la requête est terminée.
+                    </div>
+                  </div>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Example</div>
+                <pre class='p1 overflow-auto round fill-light'>db.find({<span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>, <span class="hljs-attr">hello</span>: <span class="hljs-string">'world'</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+ <span class="hljs-comment">// data retournera tous les éléments qui ont foo: bar et</span>
+ <span class="hljs-comment">// hello: world dans leurs propriétés</span>
+});</pre>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='storefindall'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>findAll(callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Récupére toutes les données.</p>
+                <div class='pre p1 fill-light mt0'>findAll(callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel à déclencher lorsque l'exécution de la requête est terminée
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='storesave'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>save(updateData, callback, id)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Sauvegardera les données récupérées dans la BDD. Si aucun élément n'existe, un nouvel élément
+                  sera créé, sinon une mise à jour des propriétés de l'élément existant sera réalisé.</p>
+                <div class='pre p1 fill-light mt0'>save(updateData: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>,
+                  id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>updateData</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      Les données à sauvegarder dans la BDD.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel après l'enregistrement.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      Un paramètre facultatif pour entrer un ID d'un élément à mettre à jour.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='storeremove'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>remove(id, callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Retire un élément du Store en fonction de son ID.</p>
+                <div class='pre p1 fill-light mt0'>remove(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de l'objet que vous souhaitez supprimer.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      Le callback après l'enregistrement.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='storedrop'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>drop(callback)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Supprime tout le stockage pour en commencer un nouveau.</p>
+                <div class='pre p1 fill-light mt0'>drop(callback: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>callback</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      La fonction de rappel après avoir supprimé les données.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='template'>
+            Template
+          </h3>
+        </div>
+        <p>Définit les valeurs par défaut du template.</p>
+        <div class='pre p1 fill-light mt0'>new Template()</div>
+        <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='templateshow'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>show(data)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Créé une chaîne HTML " <em>li</em> " et la retourne pour la placer dans l'application.</p>
+                <div class='pre p1 fill-light mt0'>show(data: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>):
+                  <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>data</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      L'objet contenant les clés que vous souhaitez trouver dans le modèle à remplacer.
+                    </div>
+                  </div>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Returns</div>
+                <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+                Template HTML correspondant à l'élément " <em>li</em> "
+                <div class='py1 quiet mt1 prose-big'>Example</div>
+                <pre class='p1 overflow-auto round fill-light'>view.show({
+<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+<span class="hljs-attr">title</span>: <span class="hljs-string">"Hello World"</span>,
+<span class="hljs-attr">completed</span>: <span class="hljs-number">0</span>,
+});</pre>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='templateitemcounter'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>itemCounter(activeTodos)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Affiche un compteur du nombre de tâches à terminer.</p>
+                <div class='pre p1 fill-light mt0'>itemCounter(activeTodos: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>):
+                  <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>activeTodos</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      Le nombre de Todos actifs.
+                    </div>
+                  </div>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Returns</div>
+                <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+                Chaîne contenant le nombre.
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='templateclearcompletedbutton'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>clearCompletedButton(completedTodos)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Met à jour le texte dans le bouton "Clear completed".</p>
+                <div class='pre p1 fill-light mt0'>clearCompletedButton(completedTodos: [type]): <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>completedTodos</span> <code class='quiet'>([type])</code>
+                      Le nombre de todos complété.
+                    </div>
+                  </div>
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Returns</div>
+                <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+                Chaîne contenant le nombre.
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class='p2 mb2 clearfix bg-white minishadow'>
+        <div class='clearfix'>
+          <h3 class='fl m0' id='view'>
+            View
+          </h3>
+        </div>
+        <p>View fait abstraction complète du DOM du navigateur. Il a deux points d'entrée simples:
+        </p>
+        <ul>
+          <li>bind(eventName, handler)
+            Prend un événement Todo et enregistre handler</li>
+          <li>render(command, parameterObject)
+            Retourne la commande donnée avec les options</li>
+        </ul>
+        <div class='pre p1 fill-light mt0'>new View(template: any)</div>
+        <div class='py1 quiet mt1 prose-big'>Parameters</div>
+        <div class='prose'>
+          <div class='space-bottom0'>
+            <div>
+              <span class='code bold'>template</span> <code class='quiet'>(any)</code>
+            </div>
+          </div>
+        </div>
+        <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+        <div class="clearfix">
+          <div class='border-bottom' id='view_removeitem'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_removeItem(id)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Supprime la Todo en fonction de l’ID.</p>
+                <div class='pre p1 fill-light mt0'>_removeItem(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de la Todo à supprimer.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_clearcompletedbutton'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_clearCompletedButton(completedCount, visible)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Masque les Todos terminées.</p>
+                <div class='pre p1 fill-light mt0'>_clearCompletedButton(completedCount: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  visible: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>completedCount</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      Le nombre de Todo terminées.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>visible</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+                      True si visible, false sinon.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_setfilter'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_setFilter(currentPage)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Indique la page actuelle.</p>
+                <div class='pre p1 fill-light mt0'>_setFilter(currentPage: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>currentPage</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+                      La page actuelle peut avoir les valeures '' || active || completed.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_elementcomplete'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_elementComplete(id, completed)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Vérifie si la Todo est terminée</p>
+                <div class='pre p1 fill-light mt0'>_elementComplete(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  completed: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de la Todo à vérifier.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>completed</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+                      Le statut de la Todo.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_edititem'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_editItem(id, title)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Permet l'édition d'une Todo.</p>
+                <div class='pre p1 fill-light mt0'>_editItem(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  title: <a
+                  href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string)</a></div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de la Todo à éditer.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>title</span> <code class='quiet'><a
+                        href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">(string)</a></code>
+                      Le nouveau contenu de la Todo.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_edititemdone'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_editItemDone(id, title)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Remplace l'ancienne Todo par la nouvelle.</p>
+                <div class='pre p1 fill-light mt0'>_editItemDone(id: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>,
+                  title: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>id</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+                      L'ID de la Todo à éditer.
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>title</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+                      Le nouveau contenu de la Todo.
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='viewrender'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>render(viewCmd, parameter)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Appelé à partir du controller, prend une fonction callback comme premier paramètre et les données
+                  d'une Todo comme deuxième paramètre</p>
+                <div class='pre p1 fill-light mt0'>render(viewCmd: any, parameter: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>viewCmd</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>parameter</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_itemid'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_itemId(element)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Retourne l'ID d'un todo en fonction de son attribut.</p>
+                <div class='pre p1 fill-light mt0'>_itemId(element: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>element</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+                      HTML Element
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_binditemeditdone'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_bindItemEditDone(handler)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Quitte le mode édition en appuyant sur la touche « enter » ou en cliquant hors du champ de saisie.
+                </p>
+                <div class='pre p1 fill-light mt0'>_bindItemEditDone(handler: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>handler</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                      Méthode attachée à l’exécution de l’événement
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='view_binditemeditcancel'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>_bindItemEditCancel(handler)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Quitte le mode édition en appuyant sur la touche « escape ».</p>
+                <div class='pre p1 fill-light mt0'>_bindItemEditCancel(handler: <a
+                    href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)
+                </div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>handler</span> <code
+                        class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+                        Méthode attachée à l’exécution de l’événement.
+                      </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class='border-bottom' id='viewbind'>
+            <div class="clearfix small pointer toggle-sibling">
+              <div class="py1 contain">
+                <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+                <span class='code strong strong truncate'>bind(event, handler)</span>
+              </div>
+            </div>
+            <div class="clearfix display-none toggle-target">
+              <section class='p2 mb2 clearfix bg-white minishadow'>
+                <p>Lien entre les méthodes du <a href="#controller">Controller</a> et les éléments de View.</p>
+                <div class='pre p1 fill-light mt0'>bind(event: any, handler: any)</div>
+                <div class='py1 quiet mt1 prose-big'>Parameters</div>
+                <div class='prose'>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>event</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                  <div class='space-bottom0'>
+                    <div>
+                      <span class='code bold'>handler</span> <code class='quiet'>(any)</code>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+
+</html>
